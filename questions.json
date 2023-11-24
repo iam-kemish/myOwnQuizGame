@@ -1,0 +1,140 @@
+ {
+    "questions": [
+      {
+        "question": "Which is the tallest mountain in Earth?",
+        "options": ["MT.Everest", "Annapurna", "Mt.k2", "Kanchunjunga"],
+        "correctOption": 0,
+        "points": 10
+      },
+      {
+        "question": "Which is the most popular tourist destination in Nepal?",
+        "options": ["Kathmandu", "Biratnagar", "Pokhara", "Kanyam"],
+        "correctOption": 3,
+        "points": 10
+      },
+      {
+        "question": "To visit Pathivara temple from Biratnagar via Illam how many districts you have to cross?",
+        "options": ["Two", "Three", "Four", "Five"],
+        "correctOption": 3,
+        "points": 10
+      },
+      {
+        "question": "Which country is Nepal bordered in the South?",
+        "options": ["India", "Bangaladesh", "China", "USA"],
+        "correctOption": 2,
+        "points": 10
+      },
+      {
+        "question": "Which is the highest altitude lake in the world?",
+        "options": [
+          "Tilicho",
+          "Gokyo",
+          "Vesuvius",
+          "Toba"
+        ],
+        "correctOption": 0,
+        "points": 10
+      },
+      {
+        "question": "Where was PN shah born?",
+        "options": ["Biratnagar", "Gorkha", "Kathmandu", "Pokhara"],
+        "correctOption": 1,
+        "points": 10
+      },
+      {
+        "question": "If 5+5 becomes 15, Give me correct answer for 12+12?",
+        "options": [
+          "29",
+          "20",
+          "36",
+          "40"
+        ],
+        "correctOption": 2,
+        "points": 30
+      },
+      {
+        "question": "What?",
+        "options": [
+          "Running an effect",
+          "Passing props",
+          "Updating state",
+          "Adding event listeners to DOM elements"
+        ],
+        "correctOption": 2,
+        "points": 20
+      },
+      {
+        "question": "I am always hungry. The thing i touch instant turn red. What am I??",
+        "options": [
+          "Tomatoes",
+          "Red ink",
+          "Fire",
+          "None"
+        ],
+        "correctOption": 2,
+        "points": 20
+      },
+      {
+        "question": "In what situation do we use a callback to update state?",
+        "options": [
+          "When updating the state will be slow",
+          "When the updated state is very data-intensive",
+          "When the state update should happen faster",
+          "When the new state depends on the previous state"
+        ],
+        "correctOption": 3,
+        "points": 30
+      },
+      {
+        "question": "I am an odd number. Take away one letter, and I become even. What number am I??",
+        "options": [
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "correctOption": 2,
+        "points": 30
+      },
+      {
+        "question": "What does kemish love mostly for his dinner?",
+        "options": ["cauli", "roast", "simple rice", "momos"],
+        "correctOption": 1,
+        "points": 10
+      },
+      {
+        "question": "I am an odd prime number. If you double me and add 1, you get a square number. What number am I?",
+        "options": [
+          "1",
+          "3",
+          "5",
+          "7"
+        ],
+        "correctOption": 2,
+        "points": 30
+      },
+      {
+        "question": "An effect will always run on the initial render.",
+        "options": [
+          "True",
+          "It depends on the dependency array",
+          "False",
+          "In depends on the code in the effect"
+        ],
+        "correctOption": 0,
+        "points": 30
+      },
+      {
+        "question": "If day after tomorrow and tomorrow(Nikorsi) is tuesday, what was the day three before from today?",
+        "options": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "correctOption": 3,
+        "points": 20
+      }
+    ]
+  }
+  

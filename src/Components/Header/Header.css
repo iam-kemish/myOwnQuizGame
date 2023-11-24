@@ -1,0 +1,12 @@
+.app-header {
+    width: 66rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+  }
+  .kemishImg {
+    width: 14rem;
+    border-radius: 50%;
+  }

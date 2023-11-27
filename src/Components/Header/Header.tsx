@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import './Header.css'
 import kemish from './kemish.jpg'
 const Header = () => {

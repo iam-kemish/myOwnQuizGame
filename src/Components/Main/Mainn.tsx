@@ -1,11 +1,8 @@
-import React from 'react'
-import './Main.css'
-const Mainn = ({children}) => {
-  return (
-    <div>
-      {children}
-    </div>
-  )
-}
+import  { ReactNode } from 'react';
+import './Main.css';
 
-export default Mainn
+const Mainn = ({ children }: { children: ReactNode }) => {
+  return <div>{children}</div>;
+};
+
+export default Mainn;

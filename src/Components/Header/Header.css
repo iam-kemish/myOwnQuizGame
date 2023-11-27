@@ -1,3 +1,10 @@
+
+.start {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .app-header {
     width: 66rem;
     margin-bottom: 4rem;

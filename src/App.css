@@ -85,3 +85,9 @@ h4 {
 .btn-ui {
   float: right;
 }
+
+@media only screen and (max-width: 510px) {
+  html {
+    font-size: 40%;
+  }
+}

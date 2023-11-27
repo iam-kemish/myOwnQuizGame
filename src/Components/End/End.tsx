@@ -28,7 +28,7 @@ const End:React.FC<End> = ({score, maximumPoints,setGame,setScore,setIndex,setOp
   if (percentage >= 0 && percentage < 30) emoji = "Kinda average!🤨";
   if (percentage === 0) emoji = "You are too embarrassing, I expected more🤦‍♂️";
   return (
-    <div>
+    <div className='end'>
       <p className="result">
         <span>{emoji}</span> You scored <strong>{score}</strong> out of{" "}
         {maximumPoints} ({Math.ceil(percentage)}%)

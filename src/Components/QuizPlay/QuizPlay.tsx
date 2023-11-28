@@ -21,6 +21,8 @@ interface qns {
   numberOfQuestions: number;
   maximumPoints: number;
   setGame: (game : string) => void;
+  correctAnswers: Question[];
+  setCorrectAnswers: React.Dispatch<React.SetStateAction<Question[]>>;
 }
 const QuizPlay: React.FC<qns> = ({
   questions,
@@ -32,7 +34,9 @@ const QuizPlay: React.FC<qns> = ({
   numberOfQuestions,
   index,
   maximumPoints,
-  setGame
+  setGame,
+  setCorrectAnswers,
+  
   
 }) => {
  
@@ -41,9 +45,10 @@ const QuizPlay: React.FC<qns> = ({
   useEffect(() => {
     if (optionChoosen === questions.correctOption) {
       setScore((prevScore: number)=> prevScore + questions.points);
-     
+      setCorrectAnswers((previousCorrectAnswer) => [...previousCorrectAnswer, questions])
     }
-  }, [optionChoosen, questions,setScore]);
+  }, [optionChoosen, questions,setScore,setCorrectAnswers]);
+
   return (
     <div>
        <Progress numberOfQuestions={numberOfQuestions} index={index} score={score} maximumPoints={maximumPoints}/>

@@ -8,7 +8,7 @@ interface Question {
   options: string[];
   points: number;
   question: string;
-  index: number;
+ 
 }
 interface qns {
   questions: Question;

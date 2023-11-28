@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react'
+import './NextButton.css'
 interface btn {
     handleNext: React.MouseEventHandler;
     hasAnswered: boolean;
@@ -7,6 +8,14 @@ interface btn {
     setGame: (game : string) => void;
 }
 const NextButton:React.FC<btn> = ({handleNext,hasAnswered,numberOfQuestions,index,setGame}) => {
+  const[btnD,setBtnD] = useState(false);
+
+const handleEndBtn=()=>{
+  setBtnD(true)
+  setTimeout(() => {
+    setGame("end")
+  }, 1700);
+}
  if(index < numberOfQuestions-1) {
     return (
         
@@ -16,9 +25,9 @@ const NextButton:React.FC<btn> = ({handleNext,hasAnswered,numberOfQuestions,inde
  } 
  if(index === numberOfQuestions-1) {
    return (
-    hasAnswered && <button className='btn btn-ui' onClick={() => setGame("end")}>Finish</button>
+    hasAnswered && <button className={` ${btnD ? "btn1" : "btn btn-ui"}`} onClick={handleEndBtn}>{btnD? "Please hold...": "Finish"}</button>
    )
  }
 }
-
+// () => setGame("end")
 export default NextButton

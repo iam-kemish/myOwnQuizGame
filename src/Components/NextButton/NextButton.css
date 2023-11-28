@@ -1,0 +1,13 @@
+.btn1 {
+    display: block;
+    font-family: inherit;
+    color: black;
+    font-size: 2rem;
+    border: 2px solid var(--color-dark);
+    background-color: #1098ad;
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.3s;
+    float: right;
+  }

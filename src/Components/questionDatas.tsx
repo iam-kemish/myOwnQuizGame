@@ -1,5 +1,10 @@
- {
-    "questions": [
+  export interface Qstn {
+    question: string;
+    options: string[];
+    correctOption: number;
+    points: number;
+  }
+  export  const qstns: Qstn[] =[
       {
         "question": "What does kemish love mostly for his dinner?",
         "options": ["cauli", "roast", "simple rice", "momos"],
@@ -137,5 +142,5 @@
         "points": 20
       }
     ]
-  }
   
+  export default qstns;

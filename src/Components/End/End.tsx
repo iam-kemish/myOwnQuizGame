@@ -51,7 +51,7 @@ const End: React.FC<End> = ({
     setOptionChoosen(null);
     setCorrectAnswers([]);
   };
- const totalPoints = correctAnswers.reduce((acc,curr) => acc+curr.points,0)
+ 
   return (
     <>
       <div className="end">

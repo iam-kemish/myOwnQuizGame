@@ -4,7 +4,10 @@ interface timerr {
     setGame: (game: string) => void;
 }
 const Timer:React.FC<timerr> = ({setGame}) => {
- const[tick,setTick] = useState(300);
+ const[tick,setTick] = useState(380);
+
+ const minutes = Math.floor(tick / 60);
+ const seconds = tick % 60;
  useEffect(() =>{
  const id =  setInterval(() =>{
     if(tick > 0) {
@@ -18,7 +21,7 @@ const Timer:React.FC<timerr> = ({setGame}) => {
   return (
    <>
     <div className='timer'>
-     {tick} seconds left.
+     {minutes} : {seconds} minutes left.
     </div>
    </>
   )

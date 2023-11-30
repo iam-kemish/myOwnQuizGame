@@ -51,7 +51,7 @@ const End: React.FC<End> = ({
     setOptionChoosen(null);
     setCorrectAnswers([]);
   };
-
+ const totalPoints = correctAnswers.reduce((acc,curr) => acc+curr.points,0)
   return (
     <>
       <div className="end">
@@ -73,13 +73,18 @@ const End: React.FC<End> = ({
               return (
                 <tr key={correct.question}>
                   <td colSpan={2}>{correct.question}</td>
+                
+                
                   <td>{correct.points}</td>
+                 
                 </tr>
               );
             })}
+             
+            <p style={{marginTop: "2rem"}}>Total questions: <strong>{correctAnswers.length}</strong></p>
           </tbody>
         </table>
-        <button className="btn btn-ui" onClick={handleEnd}>
+        <button className="btn btn-ui" onClick={handleEnd} style={{marginTop: "6rem"}}>
           Restart quiz
         </button>
       </div>

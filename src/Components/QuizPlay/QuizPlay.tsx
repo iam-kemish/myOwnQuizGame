@@ -60,7 +60,7 @@ const QuizPlay: React.FC<qns> = ({
             <button
               className={`btn btn-option ${
                 index === optionChoosen ? "optionChoosen" : ""
-              } ${hasAnswered ?( index === questions.correctOption ? "correct" : "wrong") : ""}`}
+              } `}
               key={option}
               onClick={() => setOptionChoosen(index)}
               disabled={hasAnswered}

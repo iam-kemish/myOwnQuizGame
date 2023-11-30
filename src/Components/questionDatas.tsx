@@ -6,139 +6,139 @@
   }
   export  const qstns: Qstn[] =[
       {
-        "question": "What does kemish love mostly for his dinner?",
-        "options": ["cauli", "roast", "simple rice", "momos"],
-        "correctOption": 1,
-        "points": 10
-      },
-      {
-        "question": "Which is the tallest mountain in Earth?",
-        "options": ["MT.Everest", "Annapurna", "Mt.k2", "Kanchunjunga"],
-        "correctOption": 0,
-        "points": 10
-      },
-      {
-        "question": "Which is the most popular tourist destination in Nepal?",
-        "options": ["Kathmandu", "Biratnagar", "Pokhara", "Kanyam"],
-        "correctOption": 2,
-        "points": 10
-      },
-      {
-        "question": "To visit Pathivara temple from Biratnagar via Illam how many districts you have to cross?",
-        "options": ["Two", "Three", "Four", "Five"],
+        "question": "What does kemish love mostly for his lunch?",
+        "options": ["cauli", "roast", "simple rice", "fried potato"],
         "correctOption": 3,
         "points": 10
       },
       {
-        "question": "Which country is Nepal bordered in the North?",
+        "question": "Which is the longest river in Earth?",
+        "options": ["Nile", "Amazon", "Koshi", "Singzilla"],
+        "correctOption": 0,
+        "points": 10
+      },
+      {
+        "question": "How many districts are there in Nepal?",
+        "options": ["74", "75", "76", "77"],
+        "correctOption": 3,
+        "points": 10
+      },
+      {
+        "question": "To visit Mustang  from ktm,how many districts you have to cross?",
+        "options": ["3", "4", "5", "6"],
+        "correctOption": 3,
+        "points": 10
+      },
+      {
+        "question": "Which country is Nepal bordered in the South East?",
         "options": ["India", "Bangaladesh", "China", "USA"],
-        "correctOption": 2,
+        "correctOption": 0,
         "points": 10
       },
       {
-        "question": "Which is the highest altitude lake in the world?",
+        "question": "Which place has the highest number of temples?",
         "options": [
-          "Tilicho",
-          "Gokyo",
-          "Vesuvius",
-          "Toba"
+          "ktm",
+          "Delhi",
+          "Damascus",
+          "Varanasi"
         ],
         "correctOption": 0,
         "points": 10
       },
       {
-        "question": "Where was PN shah born?",
-        "options": ["Biratnagar", "Gorkha", "Kathmandu", "Pokhara"],
-        "correctOption": 1,
+        "question": "When was PN shah born?",
+        "options": ["1779", "1780", "1781", "1778"],
+        "correctOption": 0,
         "points": 10
       },
       {
-        "question": "If 5+5 becomes 15, Give me correct answer for 12+12?",
+        "question": "What is the next number in the series: 2, 6, 12, 20, ___?",
         "options": [
-          "29",
-          "20",
+          "24",
+          "30",
           "36",
-          "40"
+          "42"
         ],
-        "correctOption": 2,
+        "correctOption": 1,
         "points": 30
       },
       {
-        "question": "What do you mean by 'ek do teen char panch che saath ath nau das gyara bara tera'?",
+        "question": "If a plane crashes on the border of the United States and Canada, where do they bury the survivors?",
         "options": [
-          "Hindi song",
-          "Numbers",
-          "None of these",
-          "kuch nahi"
-        ],
-        "correctOption": 1,
-        "points": 20
-      },
-      {
-        "question": "I am always hungry. The thing i touch instant turn red. What am I??",
-        "options": [
-          "Tomatoes",
-          "Red ink",
-          "Fire",
-          "None"
+          " United States",
+          "Canada",
+          "Nowhere, survivors are not buried",
+          "In a cemetery"
         ],
         "correctOption": 2,
         "points": 20
       },
       {
-        "question": "I am on output which pop ups in screen once i am triggered in Javascript. What am i?",
+        "question": "when i was 4 my sis was 2.Now i am 6, my sis is?",
         "options": [
-          "console",
-          "print",
-          "none",
-          "alert"
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "correctOption": 2,
+        "points": 20
+      },
+      {
+        "question": "Who is the singer of moye moye song?",
+        "options": [
+          "Blackpink",
+          "Dilher mehendi",
+          "Atif aslam",
+          "Dzanum"
         ],
         "correctOption": 3,
         "points": 30
       },
       {
-        "question": "I am an odd number. Take away one letter, and I become even. What number am I??",
+        "question": "If you rearrange the letters 'CIFAIPC', you would get the name of a:?",
         "options": [
-          "3",
-          "5",
-          "7",
-          "9"
+          "Country",
+          "City",
+          "Animal",
+          "Ocean"
         ],
-        "correctOption": 2,
+        "correctOption": 3,
         "points": 30
       },
     
       {
         "question": "I am an odd prime number. If you double me and add 1, you get a square number. What number am I?",
         "options": [
-          "1",
-          "3",
-          "none",
-          "5"
-        ],
-        "correctOption": 2,
-        "points": 30
-      },
-      {
-        "question": "'If you know me, I am kind-hearted loyal and honest person.' This statement is. ",
-        "options": [
-          "True",
-          "False",
-          "A bit true",
-          "I dont care."
+          "Footsteps",
+          "Memories",
+          "Time",
+          "Breath"
         ],
         "correctOption": 0,
         "points": 30
       },
       {
-        "question": "If day after tomorrow and tomorrow(Nikorsi) is tuesday, what was the day three before from today?",
+        "question": "Kemish is?",
         "options": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday"
+          "A person",
+          "Word",
+          "Name",
+          "I dont know."
         ],
-        "correctOption": 3,
+        "correctOption": 1,
+        "points": 30
+      },
+      {
+        "question": "if a sun goes blackout and again shines how much time we would be without sunlight?",
+        "options": [
+          "8 seconds",
+          "8 minutes",
+          "8 days",
+          "8 weeks"
+        ],
+        "correctOption": 1,
         "points": 20
       }
     ]

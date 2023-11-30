@@ -6,22 +6,21 @@ import qstns from "./Components/questionDatas";
 import StartScreen from "./Components/StartScreen/StartScreen";
 import QuizPlay from "./Components/QuizPlay/QuizPlay";
 import End from "./Components/End/End";
-import EndTable from "./Components/EndTable/EndTable";
+
 interface Question {
   correctOption: number;
   options: string[];
   points: number;
   question: string;
- 
 }
-// console.log(qstns,"qq")
+
 function App() {
   const [game, setGame] = useState("start");
   const [index, setIndex] = useState(0);
   const [optionChoosen, setOptionChoosen] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [nextQuestion, setNextQuestion] = useState(0);
-  const[correctAnswers,setCorrectAnswers] = useState<Question[]>([])
+  const [correctAnswers, setCorrectAnswers] = useState<Question[]>([]);
   const [show, setShow] = useState(false);
 
   console.log(nextQuestion);
@@ -32,11 +31,8 @@ function App() {
   }
   const numberOfQuestions = qstns.length;
   const maximumPoints = qstns.reduce((acc, curr) => acc + curr.points, 0);
+
  
-  function handleShow() {
-    setShow(true)
-    setGame("endpage")
-  }
   return (
     <>
       <div className="app">
@@ -69,14 +65,13 @@ function App() {
               setIndex={setIndex}
               correctAnswers={correctAnswers}
               show={show}
-              setShow ={setShow}
-              handleShow={ handleShow}
+              setShow={setShow}
+         
+              setCorrectAnswers={setCorrectAnswers}
               
             />
           )}
-          {
-            game === "endpage" && <EndTable  correctAnswers={correctAnswers} setGame={setGame} setScore={setScore} setIndex={setIndex} setOptionChoosen={setOptionChoosen} show={show} setCorrectAnswers={setCorrectAnswers}/>
-          }
+
           <></>
 
           <div></div>

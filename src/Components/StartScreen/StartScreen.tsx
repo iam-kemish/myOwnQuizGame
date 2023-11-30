@@ -9,6 +9,7 @@ const StartScreen:React.FC<Quiz> = ({ setGame}) => {
         <div className="start">
       <h2>Welcome to My own quiz</h2>
       <h3>lets see how much would you score😉</h3>
+      <h4>Your results will be displayed at last.</h4>
       <button
         className="btn btn-ui" onClick={() => setGame("quiz")} >
         Let's start

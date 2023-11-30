@@ -10,14 +10,8 @@
   }
   .optionChoosen {
     transform: translateX(2rem);
-  }
-  .correct {
-    background-color: var(--color-theme);
-    border: 2px solid var(--color-theme);
-    color: var(--color-light);
-  }
-  .wrong {
     background-color: var(--color-accent);
     border: 2px solid var(--color-accent);
     color: var(--color-darkest);
   }
+ 

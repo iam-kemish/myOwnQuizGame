@@ -1,7 +1,6 @@
 import React from "react";
 import "./End.css";
 
-
 interface Question {
   correctOption: number;
   options: string[];
@@ -18,17 +17,21 @@ interface End {
   setScore: (score: number) => void;
   setIndex: (index: number) => void;
   correctAnswers: Question[];
-  handleShow: React.MouseEventHandler;
+
+  setCorrectAnswers: React.Dispatch<React.SetStateAction<Question[]>>;
 }
 const End: React.FC<End> = ({
   score,
   maximumPoints,
-  handleShow
-}) => {
-  
-  const percentage = (score / maximumPoints) * 100;
- 
 
+  correctAnswers,
+  setGame,
+  setScore,
+  setIndex,
+  setOptionChoosen,
+  setCorrectAnswers,
+}) => {
+  const percentage = (score / maximumPoints) * 100;
 
   let emoji;
   if (percentage === 100)
@@ -41,22 +44,46 @@ const End: React.FC<End> = ({
   if (percentage >= 0 && percentage < 30) emoji = "Kinda average!🤨";
   if (percentage === 0) emoji = "You are too embarrassing, I expected more🤦‍♂️";
 
-  
-  return (
-  <>
-    <div className="end">
-      <p className="result">
-        <span>{emoji}</span> You scored <strong>{score}</strong> out of{" "}
-        {maximumPoints} ({Math.ceil(percentage)}%)
-      </p>
-      <button className="btn btn-ui" onClick={handleShow}>
-        View Correctly answered questions.
-      </button>
-     
-    </div>
+  const handleEnd = () => {
+    setGame("start");
+    setScore(0);
+    setIndex(0);
+    setOptionChoosen(null);
+    setCorrectAnswers([]);
+  };
 
-  </>
-    
+  return (
+    <>
+      <div className="end">
+        <p className="result">
+          <span>{emoji}</span> You scored <strong>{score}</strong> out of{" "}
+          {maximumPoints} ({Math.ceil(percentage)}%)
+        </p>
+      </div>
+      <div className="endpage">
+        <table>
+          <thead>
+            <tr>
+              <th colSpan={2}>Questions</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {correctAnswers.map((correct) => {
+              return (
+                <tr key={correct.question}>
+                  <td colSpan={2}>{correct.question}</td>
+                  <td>{correct.points}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        <button className="btn btn-ui" onClick={handleEnd}>
+          Restart quiz
+        </button>
+      </div>
+    </>
   );
 };
 

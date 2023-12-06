@@ -109,14 +109,14 @@
       },
     
       {
-        "question": "I am an odd prime number. If you double me and add 1, you get a square number. What number am I?",
+        "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I??",
         "options": [
-          "Footsteps",
-          "Memories",
-          "Time",
-          "Breath"
+          "whisper",
+          "silence",
+          "echo",
+          "thunder"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
       },
       {

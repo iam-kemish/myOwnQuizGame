@@ -2,8 +2,9 @@ import React,{useEffect,useState} from 'react'
 import './Timer.css'
 interface timerr {
     setGame: (game: string) => void;
+    toggle: string
 }
-const Timer:React.FC<timerr> = ({setGame}) => {
+const Timer:React.FC<timerr> = ({setGame,toggle}) => {
  const[tick,setTick] = useState(380);
 
  const minutes = Math.floor(tick / 60);
@@ -20,8 +21,8 @@ const Timer:React.FC<timerr> = ({setGame}) => {
  })
   return (
    <>
-    <div className='timer'>
-     {minutes} : {seconds} minutes left.
+    <div className="timer">
+    <p className={`${toggle === "light"? "light": ""}`}> {minutes} : {seconds} minutes left.</p>
     </div>
    </>
   )

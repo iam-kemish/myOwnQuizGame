@@ -8,10 +8,18 @@
     width: 100%;
     text-align: left;
   }
-  .optionChoosen {
+  .optionChoosennonLight {
     transform: translateX(2rem);
     background-color: var(--color-accent);
     border: 2px solid var(--color-accent);
     color: var(--color-darkest);
   }
+  .optionChoosenlight {
+    transform: translateX(2rem);
+    background-color: #e6e1dc;
+    border: 2px solid var(--color-accent);
+    color: var(--color-darkest);
+  }
  
+
+  /* e6e1dc */

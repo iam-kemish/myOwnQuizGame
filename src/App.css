@@ -24,10 +24,13 @@ html {
 
 body {
   min-height: 100vh;
-  color: var(--color-light);
-  background-color: var(--color-darkest);
+ 
   padding: 3.2rem;
 }
+/* color: var(--color-light);
+background-color: var(--color-darkest); */
+
+
 .app {
   display: flex;
   flex-direction: column;
@@ -71,11 +74,30 @@ h4 {
   border-radius: 100px;
   transition: 0.3s;
 }
+.btnLght {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2rem;
+  border: 2px solid var(--color-dark);
+  
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
 .btn:not([disabled]):hover {
   background-color: var(--color-darkest);
 }
 
 .btn-option:not([disabled]):hover {
+  transform: translateX(1.2rem);
+}
+.btnLght:not([disabled]):hover {
+  background-color: #ced4da;
+}
+
+.btnLght-option:not([disabled]):hover {
   transform: translateX(1.2rem);
 }
 
@@ -90,4 +112,8 @@ h4 {
   html {
     font-size: 40%;
   }
+}
+
+.wholeLight {
+  background-color: #ced4da;
 }

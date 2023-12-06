@@ -15,6 +15,7 @@ interface Question {
 }
 
 function App() {
+  const [toggle, setToggle] = useState("light");
   const [game, setGame] = useState("start");
   const [index, setIndex] = useState(0);
   const [optionChoosen, setOptionChoosen] = useState<number | null>(null);
@@ -31,14 +32,32 @@ function App() {
   }
   const numberOfQuestions = qstns.length;
   const maximumPoints = qstns.reduce((acc, curr) => acc + curr.points, 0);
+  const handleToggle = () => {
+    if(toggle === "light") {
+      setToggle("dark")
+      document.body.style.backgroundColor = "#343a40"
+      document.body.style.color = "#f1f3f5"
+    
+    }else {
+      setToggle("light")
+      document.body.style.backgroundColor = "white"
+      document.body.style.color = "#343a40"
+     
+    }
+  };
 
- 
   return (
     <>
-      <div className="app">
+      <div className={`app ${toggle ? "appDark" : "appLight"}`}>
         <Header />
         <Mainn>
-          {game === "start" && <StartScreen setGame={setGame} />}
+          {game === "start" && (
+            <StartScreen
+              setGame={setGame}
+              toggle={toggle}
+              handleToggle={handleToggle}
+            />
+          )}
           {game === "quiz" && (
             <QuizPlay
               questions={qstns[index]}
@@ -53,6 +72,7 @@ function App() {
               setGame={setGame}
               correctAnswers={correctAnswers}
               setCorrectAnswers={setCorrectAnswers}
+              toggle={toggle}
             />
           )}
           {game === "end" && (
@@ -66,9 +86,8 @@ function App() {
               correctAnswers={correctAnswers}
               show={show}
               setShow={setShow}
-         
               setCorrectAnswers={setCorrectAnswers}
-              
+              toggle={toggle}
             />
           )}
 

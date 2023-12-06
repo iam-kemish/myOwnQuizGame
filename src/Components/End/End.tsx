@@ -17,7 +17,7 @@ interface End {
   setScore: (score: number) => void;
   setIndex: (index: number) => void;
   correctAnswers: Question[];
-
+  toggle: string;
   setCorrectAnswers: React.Dispatch<React.SetStateAction<Question[]>>;
 }
 const End: React.FC<End> = ({
@@ -29,6 +29,7 @@ const End: React.FC<End> = ({
   setScore,
   setIndex,
   setOptionChoosen,
+  toggle,
   setCorrectAnswers,
 }) => {
   const percentage = (score / maximumPoints) * 100;
@@ -84,7 +85,7 @@ const End: React.FC<End> = ({
             <p style={{marginTop: "2rem"}}>Total questions: <strong>{correctAnswers.length}</strong></p>
           </tbody>
         </table>
-        <button className="btn btn-ui" onClick={handleEnd} style={{marginTop: "6rem"}}>
+        <button className={`${toggle === "light"? "btnLght" : "btn"}`} onClick={handleEnd} style={{marginTop: "6rem"}}>
           Restart quiz
         </button>
       </div>

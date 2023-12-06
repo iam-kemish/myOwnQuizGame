@@ -5,9 +5,18 @@
     gap: 1.2rem;
     grid-template-columns: auto auto;
     font-size: 1.8rem;
-    color: var(--color-medium);
+   
   }
-  
+.progressLight {
+    margin-bottom: 4rem;
+    display: grid;
+    justify-content: space-between;
+    gap: 1.2rem;
+    grid-template-columns: auto auto;
+    font-size: 1.8rem;
+    
+  }
+
   .progress {
     -webkit-appearance: none;
     width: 100%;
@@ -23,3 +32,7 @@
     background-color: var(--color-theme);
     border-radius: 100px;
   }
+  .light {
+    color: var(--color-darkest);
+  }
+  

@@ -23,6 +23,7 @@ interface qns {
   setGame: (game : string) => void;
   correctAnswers: Question[];
   setCorrectAnswers: React.Dispatch<React.SetStateAction<Question[]>>;
+  toggle: string;
 }
 const QuizPlay: React.FC<qns> = ({
   questions,
@@ -36,7 +37,7 @@ const QuizPlay: React.FC<qns> = ({
   maximumPoints,
   setGame,
   setCorrectAnswers,
-  
+  toggle
   
 }) => {
  
@@ -51,29 +52,28 @@ const QuizPlay: React.FC<qns> = ({
 
   return (
     <div>
-       <Progress numberOfQuestions={numberOfQuestions} index={index} score={score} maximumPoints={maximumPoints}/>
+       <Progress numberOfQuestions={numberOfQuestions} index={index} score={score} maximumPoints={maximumPoints}  toggle={toggle}/>
       <h4>{questions.question}</h4>
       <div className="options">
         {questions.options.map((option, index) => {
           // console.log(index)
           return (
             <button
-              className={`btn btn-option ${
-                index === optionChoosen ? "optionChoosen" : ""
-              } `}
-              key={option}
-              onClick={() => setOptionChoosen(index)}
-              disabled={hasAnswered}
-          
-            >
+            className={`${toggle === "light" ? "btnLght" : "btn"} btn-option ${
+              index === optionChoosen ? `optionChoosen${toggle === "light" ? "light" : "nonLight"}` : ""
+            } `}
+            key={option}
+            onClick={() => setOptionChoosen(index)}
+            disabled={hasAnswered}
+          >
               {option}
             </button>
           );
         })}
       </div>
      
-      <Timer setGame={setGame}/>
-      <NextButton hasAnswered={hasAnswered} handleNext={handleNext} numberOfQuestions={numberOfQuestions} index={index} setGame={setGame}/>
+      <Timer setGame={setGame} toggle={toggle}/>
+      <NextButton hasAnswered={hasAnswered} handleNext={handleNext} numberOfQuestions={numberOfQuestions} index={index} setGame={setGame} toggle={toggle}/>
     </div>
   );
 };

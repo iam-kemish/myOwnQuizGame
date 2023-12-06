@@ -6,8 +6,9 @@ interface btn {
     numberOfQuestions: number;
     index: number;
     setGame: (game : string) => void;
+    toggle: string
 }
-const NextButton:React.FC<btn> = ({handleNext,hasAnswered,numberOfQuestions,index,setGame}) => {
+const NextButton:React.FC<btn> = ({handleNext,hasAnswered,numberOfQuestions,index,setGame,toggle}) => {
   const[btnD,setBtnD] = useState(false);
 
 const handleEndBtn=()=>{
@@ -19,15 +20,16 @@ const handleEndBtn=()=>{
  if(index < numberOfQuestions-1) {
     return (
         
-            hasAnswered && <button className="btn btn-ui" onClick={handleNext}>Next</button>
+            hasAnswered && <button className={`${toggle === "light"? " btn1Light" : "btn1"}`} onClick={handleNext}>Next</button>
           
       )
  } 
  if(index === numberOfQuestions-1) {
    return (
-    hasAnswered && <button className={` ${btnD ? "btn1" : "btn btn-ui"}`} onClick={handleEndBtn}>{btnD? "Please hold...": "Finish"}</button>
+    hasAnswered && <button className={`${toggle === "light"? " btn1Light" : "btn1"}`} onClick={handleEndBtn}>{btnD? "Please hold...": "Finish"}</button>
    )
  }
 }
+
 // () => setGame("end")
 export default NextButton

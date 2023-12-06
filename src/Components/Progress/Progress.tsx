@@ -5,18 +5,19 @@ import './Progress.css'
     numberOfQuestions: number;
     score: number;
     maximumPoints: number;
+    toggle: string;
  }
-const Progress:React.FC<progres> = ({numberOfQuestions, index, score,maximumPoints}) => {
+const Progress:React.FC<progres> = ({numberOfQuestions, index, score,maximumPoints,toggle}) => {
   return (
     <div>
       <progress max={numberOfQuestions} value={index + Number(score !== null)} style={{width: "100%", marginBottom: "1rem"}} />
      <header className="progress">
-      <p>
+      <p className={`${toggle === "light"? "light" : ""}`}>
         Question <strong>{index + 1}</strong> / {numberOfQuestions}
       </p>
 
 
-      <p>
+      <p  className={`${toggle === "light"? "light" : ""}`}>
         <strong>{score}</strong> / {maximumPoints}
       </p>
     </header>
